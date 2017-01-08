@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Bitcoin martket" name="description" />
+    <meta content="Hien Nguyen" name="author" />
+    <title>bitcoin</title>
+    <link rel="stylesheet" href="css/bootstrap.cyborg.css" />
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-84482049-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container">
+        <div class="header col-md-12">
+            <div class="row bg-primary">
+                <div class="col-md-4">
+                    <h1>Bitcoin</h1>
+                    <h2 id="market"></h2>
+                </div>
+                <div class="col-md-4">
+                    <h1>High</h1>
+                    <h2 id="high-count"></h2>
+                </div>
+                <div class="col-md-4">
+                    <h1>Low</h1>
+                    <h2 id="low-count"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="main col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary">Recent Trades</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Buy</th>
+                            <td>
+                                <p id="buy"></p>
+                            </td>
+                            <th>Sell</th>
+                            <td>
+                                <p id="sell"></p>
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Trade Volume</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Volume</th>
+                            <td>
+                                <p id="volume"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!--trade-->
+        <div class="main col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary">Trades</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Price</th>
+                            <td>
+                                <p id="grouporder-price"></p>
+                            </td>
+                            <th>Total</th>
+                            <td>
+                                <p id="totalamount"></p>
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Market Volume</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Volume</th>
+                            <td>
+                                <p id="volume1"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!--grouporder-->
+
+        <div class="main col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary">Trades</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Type</th>
+                            <td>
+                                <p id="type"></p>
+                            </td>
+                            <th>Price</th>
+                            <td>
+                                <p id="price1"></p>
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Previous trades</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Trades</th>
+                            <td>
+                                <p id="volume2"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!---->
+
+        <div class="main col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-primary">Trades</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Type</th>
+                            <td>
+                                <p id="type2"></p>
+                            </td>
+                            <th>Price</th>
+                            <td>
+                                <p id="price2"></p>
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-primary">Trade Volume</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Volume</th>
+                            <td>
+                                <p id="volume3"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="js/mainCtrl.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
